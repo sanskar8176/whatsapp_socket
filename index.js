@@ -2,10 +2,12 @@ import { Server } from 'socket.io';
 
 // type module package.json me likhne pr hi es6 ko identify krta hai 
 
+const FRONTEND_URL =  'https://whatsapp-s2ai.onrender.com/'||'http://localhost:3000'
+
 // socket.io as a server work krega do client ke bich
 const io = new Server(9000, {
     cors: {
-        origin: 'http://localhost:3000',  // ess origin se data ayega to  cors allow krega
+        origin: FRONTEND_URL,  // ess origin se data ayega to  cors allow krega
     }, 
 })
 
